@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+}
+
+group 'ch.georgerowlands'
+version '1.0'
+
+sourceCompatibility = 15
+targetCompatibility = 15
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+}
+
+task testSortedBag (type: Test) {
+    group = 'verification'
+    description = 'Runs tests for the sorted bag implementation'
+
+    include('datastructures/arraycollections/SortedBagTest.class')
+}
+
+task testSortedSet (type: Test) {
+    group = 'verification'
+    description = 'Runs tests for the sorted set implementation'
+
+    include('datastructures/arraycollections/SortedSetTest.class')
+}
+
+task testUnsortedBag (type: Test) {
+    group = 'verification'
+    description = 'Runs tests for the unsorted bag implementation'
+
+    include('datastructures/arraycollections/UnsortedBagTest.class')
+}
+
+task testUnsortedSet (type: Test) {
+    group = 'verification'
+    description = 'Runs tests for the unsorted set implementation'
+
+    include('datastructures/arraycollections/UnsortedSetTest.class')
+}
