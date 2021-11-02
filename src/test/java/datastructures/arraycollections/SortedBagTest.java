@@ -7,6 +7,7 @@ import java.util.List;
 
 import datastructures.arraycollections.general.AbstractBagTest;
 import datastructures.arraycollections.general.ElementExistenceChecker;
+import datastructures.arraycollections.mysol.SortedBag;
 
 public class SortedBagTest extends AbstractBagTest {
 	@Override

@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 
+import datastructures.arraycollections.mysol.UnsortedBag;
 import org.junit.Test;
 
 import datastructures.arraycollections.general.AbstractBagTest;

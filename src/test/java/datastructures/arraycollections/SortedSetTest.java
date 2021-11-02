@@ -8,6 +8,7 @@ import java.util.List;
 
 import datastructures.arraycollections.general.AbstractSetTest;
 import datastructures.arraycollections.general.ElementExistenceChecker;
+import datastructures.arraycollections.mysol.SortedSet;
 
 public class SortedSetTest extends AbstractSetTest {
 	@Override
