@@ -1,4 +1,4 @@
-package datastructures.arraycollections;
+package datastructures.arraycollections.excercise;
 
 import java.util.Arrays;
 import java.util.Set;

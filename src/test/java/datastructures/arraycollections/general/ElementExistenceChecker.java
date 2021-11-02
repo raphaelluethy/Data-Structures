@@ -2,7 +2,7 @@ package datastructures.arraycollections.general;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import datastructures.arraycollections.AbstractArrayCollection;
+import datastructures.arraycollections.excercise.AbstractArrayCollection;
 
 public class ElementExistenceChecker {
 	public static void inGivenOrder(Comparable<Integer>[] numbers, AbstractArrayCollection<Integer> bag) {

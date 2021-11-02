@@ -1,4 +1,4 @@
-package datastructures.arraycollections;
+package datastructures.arraycollections.excercise;
 
 import java.util.AbstractCollection;
 import java.util.Iterator;

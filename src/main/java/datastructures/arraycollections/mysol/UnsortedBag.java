@@ -1,6 +1,6 @@
 package datastructures.arraycollections.mysol;
 
-import datastructures.arraycollections.AbstractArrayCollection;
+import datastructures.arraycollections.excercise.AbstractArrayCollection;
 
 import java.util.Arrays;
 

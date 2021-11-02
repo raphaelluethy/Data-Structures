@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import datastructures.arraycollections.AbstractArrayCollection;
+import datastructures.arraycollections.excercise.AbstractArrayCollection;
 
 public abstract class AbstractBagTest extends AbstractCollectionTest {
 	@Override

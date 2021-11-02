@@ -12,7 +12,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-import datastructures.arraycollections.AbstractArrayCollection;
+import datastructures.arraycollections.excercise.AbstractArrayCollection;
 
 public abstract class AbstractCollectionTest {
 	private static final int DEFAULT_SIZE = 10;

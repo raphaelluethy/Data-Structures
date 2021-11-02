@@ -1,23 +1,21 @@
-package datastructures.arraycollections;
+package datastructures.arraycollections.excercise;
 
 import java.util.Arrays;
-import java.util.Set;
 
-public class UnsortedSet<E> extends AbstractArrayCollection<E> implements Set<E> {
+public class SortedBag<E extends Comparable<? super E>> extends AbstractArrayCollection<E> {
     public static final int DEFAULT_CAPACITY = 100;
     private E[] data;
 
-    public UnsortedSet() {
+    public SortedBag() {
         this(DEFAULT_CAPACITY);
     }
 
-    public UnsortedSet(int capacity) {
-        data = (E[]) new Object[capacity];
+    public SortedBag(int capacity) {
+        data = (E[]) new Comparable[capacity];
     }
 
     public static void main(String[] args) {
-        UnsortedSet<Integer> bag = new UnsortedSet<Integer>();
-        bag.add(2);
+        SortedBag<Integer> bag = new SortedBag<Integer>();
         bag.add(2);
         bag.add(1);
         System.out.println(Arrays.toString(bag.toArray()));
