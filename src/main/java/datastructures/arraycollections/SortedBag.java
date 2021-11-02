@@ -19,6 +19,11 @@ public class SortedBag<E extends Comparable<? super E>> extends AbstractArrayCol
         SortedBag<Integer> bag = new SortedBag<Integer>();
         bag.add(2);
         bag.add(1);
+        bag.add(2);
+        System.out.println(Arrays.toString(bag.toArray()));
+        System.out.println("SortedBag is sorted and allows the same value multiple times.");
+        System.out.println("Bag contains 1: " + bag.contains(1));
+        bag.remove(1);
         System.out.println(Arrays.toString(bag.toArray()));
     }
 
