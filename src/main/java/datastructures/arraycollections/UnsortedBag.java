@@ -19,6 +19,11 @@ public class UnsortedBag<E> extends AbstractArrayCollection<E> {
         UnsortedBag<Integer> bag = new UnsortedBag<Integer>();
         bag.add(2);
         bag.add(1);
+        bag.add(2);
+        System.out.println(Arrays.toString(bag.toArray()));
+        System.out.println("UnsortedBag is not sorted and allows the same value multiple times.");
+        System.out.println("Bag contains 1: " + bag.contains(1));
+        bag.remove(1);
         System.out.println(Arrays.toString(bag.toArray()));
     }
 
