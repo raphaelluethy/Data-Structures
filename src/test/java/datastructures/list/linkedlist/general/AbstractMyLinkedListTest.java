@@ -8,12 +8,12 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.concurrent.TimeUnit;
 
+import datastructures.list.mysol.linkedlist.MyLinkedList;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.rules.Timeout;
 
 import datastructures.list.exercise.MyAbstractList;
-import datastructures.list.linkedlist.MyLinkedList;
 
 public abstract class AbstractMyLinkedListTest {
 	protected MyAbstractList<Integer> list;
