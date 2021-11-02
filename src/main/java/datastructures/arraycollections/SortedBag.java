@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 public class SortedBag<E extends Comparable<? super E>> extends AbstractArrayCollection<E> {
     public static final int DEFAULT_CAPACITY = 100;
-    private E[] data;
+    private final E[] data;
+    private int size = 0;
 
     public SortedBag() {
         this(DEFAULT_CAPACITY);
     }
 
-    @SuppressWarnings("unchecked")
     public SortedBag(int capacity) {
         data = (E[]) new Comparable[capacity];
     }
@@ -24,20 +24,49 @@ public class SortedBag<E extends Comparable<? super E>> extends AbstractArrayCol
 
     @Override
     public boolean add(E e) {
-        // TODO implement unless collection shall be immutable
-        throw new UnsupportedOperationException();
+        if (e == null) throw new NullPointerException();
+        if (size == data.length) throw new IllegalStateException("Collection is full!");
+        int index = getIndexOf(e);
+        index = index >= 0 ? index : -index - 1; // Index or if not found insertionPoint
+        shiftRight(index);
+        data[index] = e;
+        size++;
+        return true;
     }
 
     @Override
     public boolean remove(Object o) {
-        // TODO implement unless collection shall be immutable
-        throw new UnsupportedOperationException();
+        int index = getIndexOf(o);
+        if (index >= 0) { // Exists
+            shiftLeft(index);
+            data[--size] = null; // Memory Leak cleanup
+            return true;
+        }
+        return false;
     }
 
     @Override
     public boolean contains(Object o) {
-        // TODO must be implemented
-        throw new UnsupportedOperationException();
+        return getIndexOf(o) >= 0;
+    }
+
+    private void shiftLeft(int index) {
+        for (int i = index; i < size - 1; i++) {
+            data[i] = data[i + 1];
+        }
+    }
+
+    private void shiftRight(int index) {
+        for (int i = size; i > index; i--) {
+            data[i] = data[i - 1];
+        }
+    }
+
+    private int getIndexOf(Object o) {
+        if (o == null) throw new NullPointerException();
+        // Arrays.binarySearch returns index if found, otherwise (-(insertPosition) -1)
+        // Where insertionPoint is the index of the first element larger then o.
+        return Arrays.binarySearch(data, 0, size, o);
     }
 
     @Override
@@ -47,7 +76,6 @@ public class SortedBag<E extends Comparable<? super E>> extends AbstractArrayCol
 
     @Override
     public int size() {
-        // TODO must be implemented
-        return 0;
+        return size;
     }
 }
