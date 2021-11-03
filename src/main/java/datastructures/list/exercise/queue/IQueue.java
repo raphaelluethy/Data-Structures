@@ -5,7 +5,7 @@ package datastructures.list.exercise.queue;
  */
 public interface IQueue<E> {
 
-    public abstract E enqueue(E elem);
+    public abstract void enqueue(E elem);
 
     public abstract E dequeue();
 

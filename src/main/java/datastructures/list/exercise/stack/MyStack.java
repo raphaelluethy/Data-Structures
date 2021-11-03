@@ -25,6 +25,11 @@ public class MyStack<E> implements IStack<E> {
 		throw new UnsupportedOperationException();
 	}
 
+	@Override
+	public int size() {
+		return 0;
+	}
+
 	public static void main(String[] args) {
 		MyStack<Integer> stack = new MyStack<Integer>();
 		System.out.println("Pushing numbers to stack (0 to 9)");

@@ -8,9 +8,8 @@ public class MyQueue<E> implements IQueue<E> {
     MyLinkedList<E> list = new MyLinkedList<>();
 
     @Override
-    public E enqueue(E elem) {
+    public void enqueue(E elem) {
         list.add(list.size(), elem);
-        return elem;
     }
 
     @Override

@@ -32,6 +32,11 @@ public class MyStack<E> implements IStack<E> {
         return list.size() < 1;
     }
 
+    @Override
+    public int size() {
+        return list.size();
+    }
+
     public static void main(String[] args) {
         MyStack<Integer> stack = new MyStack<Integer>();
         System.out.println("Pushing numbers to stack (0 to 9)");
