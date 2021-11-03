@@ -35,11 +35,12 @@ There are 2 ways to implement this, either the enqueue operation will be costly 
 Hwowever you will in both cases need 2 stacks(Q1 and Q2).
 
 Lets say we will make the dequeue costly:
-**Enqueue**: 
+
+## Enqueue
 push() incoming data to Q1.
 Here time complexity will be O(1)
 
-**Dequeue**: 
+## Dequeue
 If Q2 is empty: then one by one pop() from Q1 and push() to Q2. (This will flip the order)
 Pop() the element from Q2. Which will be the one that was at the bottom of the Q1, so the last added.
 Here time complexity will be O(N)
@@ -49,11 +50,14 @@ Here time complexity will be O(N)
 This is the opposite to the above, here we also will need to choose an operation to be costly and will be using 2 queues(Q1 and Q2).
 
 Lets say we will make the push costly:
-**Push**: 
+
+## Push
 if Q1 is not empty: then one by one dequeue() from Q1 and enqueue() to Q2.
 Enqueue() the new value to Q1.
 Dequeue() from Q2 and enqueue to Q1 for all values.
-**Pop**: 
+Here time complexity will be O(n)
+
+## Pop
 Dequeue() an item from Q1 and return it.
 Here time complexity will be O(1)
 
