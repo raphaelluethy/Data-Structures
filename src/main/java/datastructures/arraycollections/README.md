@@ -1,9 +1,13 @@
 # Bag (Multiset)
 A Bag can contain the same value multiple times. 
+In Java the Bag functionality is defined by the "Collection" interface.
 
 # Set
 Compared to a bag, a set can only contain each value once. Meaning when adding a new element to the set there needs
 to be an initial check to see if the value is already contained in the set. It is just like a mathematical set.
+In Java the Set functionality is defined by the "Set" interface.
+
+![image](https://user-images.githubusercontent.com/47121010/140033989-ba81d397-2226-4c4b-8342-5c3f9870e4bc.png)
 
 # Sorted Bag and Set
 When adding the condition, that the data structure needs to be sorted it adds an extra layer of complexity.
